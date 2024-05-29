@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos en Javascript</title>
+</head>
+<body>
+    <script>
+
+        // var nombre = 'Carlos';
+        // var edad = 20;
+        // var pais = 'Mexico';
+
+        // var nombreHermano = 'Christian';
+        // var edadHermano = 32;
+        // var paisHermano = 'España';
+
+        //opcion, se puede poner un metodo lo cual es una funcion dentro de un metodo
+        // var Carlos = {
+        //     nombre: 'Carlos Arturo',
+        //     edad: 20,
+        //     pais: 'Mexico',
+        //     bio: function(){//bio =  biografia
+        //         return this.nombre + ' tiene ' + this.edad + ' años ';
+        //     }
+        // };
+
+        // var Christian = {
+        //         nombre: 'Christian',
+        //         edad: 17,
+        //         pais: 'España'
+        // };
+
+        // document.write(Christian.nombre);
+        // document.write(Carlos.bio());//se tiene que acceder al objeto que es Carlos y al metodo el cual si lleva parentesis es un metodo y si no lleva es una propiedad
+
+
+        // ------ ------ ------ Constructor de objetos conforme se van necesitando ------ ----- -----cuando no sabemos cuantos objetos hay
+
+    //palabra function  + nombre del objeto en este caso persona + (parametros a utilizar)
+        function persona (nombre, edad, pais) {
+            this.nombre = nombre;
+            this.edad = edad;
+            this.pais = pais;
+        }
+
+        var papa = new persona ('Arturo', 35, 'Mexico');
+        var amigo = new persona ('Alex', 32, 'España');
+        var hermano = new persona ('Christian', 32, 'Colombia');
+
+        // var papa = {
+        //     nombre: 'Arturo',
+        //     edad: 35,
+        //     pais: 'Mexico'
+        // };
+
+        document.write(papa.nombre);
+        document.write('<br>');
+        document.write(amigo.edad);
+        document.write('<br>');
+        document.write(hermano.pais);
+
+    </script>
+</body>
+</html>
